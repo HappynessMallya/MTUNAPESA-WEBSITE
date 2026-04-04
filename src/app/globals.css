@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply text-navy antialiased;
+    background-color: #f3f5f9;
+    background-image:
+      radial-gradient(ellipse 100% 80% at 50% -35%, rgba(59, 108, 240, 0.11), transparent 55%),
+      radial-gradient(ellipse 70% 50% at 100% 0%, rgba(45, 138, 110, 0.07), transparent 50%),
+      radial-gradient(ellipse 60% 40% at 0% 100%, rgba(59, 108, 240, 0.05), transparent 45%);
+    background-attachment: fixed;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent;
+  }
+}
+
+@layer utilities {
+  .hero-grid {
+    background-image:
+      linear-gradient(rgba(15, 23, 41, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(15, 23, 41, 0.03) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse 70% 65% at 50% 40%, black 20%, transparent 70%);
+  }
+
+  /* Subtle film grain — very light, calm texture */
+  .hero-noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 128px 128px;
+    mix-blend-mode: multiply;
+  }
+}
