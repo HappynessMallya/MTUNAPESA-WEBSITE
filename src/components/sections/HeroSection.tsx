@@ -7,18 +7,35 @@ import Link from "next/link";
 
 const trust = ["Private", "Secure", "No ads", "No data selling"];
 
+/** One viewport below sticky navbar (`100svh` avoids mobile URL-bar jump vs `100vh`) */
+const heroMinHeight = "min-h-[calc(100svh-5rem)]";
+
 export function HeroSection() {
   return (
     <section
-      className={`${HOME_SECTION_BG.hero} border-b border-navy/[0.07] py-10 pb-12 md:py-12 md:pb-14 lg:py-14 lg:pb-16`}
+      className={`${HOME_SECTION_BG.hero} relative flex w-full flex-col border-b border-navy/[0.07] ${heroMinHeight}`}
+      aria-label="Introduction"
     >
-      <div className={sectionInset}>
-        <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-14">
-          <div className="border-l border-navy/[0.12] pl-6 md:pl-8">
-            <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-muted-foreground">
-              Personal finance
-            </p>
-            <h1 className="font-serif mt-5 max-w-[22ch] text-[clamp(2.125rem,3.5vw+1rem,3.125rem)] font-medium leading-[1.14] tracking-[-0.02em] text-navy">
+      <div className={`${sectionInset} relative z-10 flex flex-1 flex-col justify-center py-10 pb-16 md:py-12 md:pb-20 lg:py-14 lg:pb-24`}>
+        <div className="grid items-center gap-8 sm:gap-10 lg:grid-cols-2 lg:gap-14">
+          <div className="border-l border-navy/[0.12] pl-5 sm:pl-6 md:pl-8">
+            <div className="-ml-1 mb-5 flex items-center gap-3 lg:mb-6">
+              <Image
+                src="/icon.png"
+                alt=""
+                width={44}
+                height={44}
+                className="h-10 w-10 rounded-xl border border-navy/[0.08] bg-white object-cover shadow-sm sm:h-11 sm:w-11"
+                priority
+              />
+              <div>
+                <p className="text-sm font-semibold text-navy">MTU NA PESA</p>
+                <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-muted-foreground">
+                  Personal finance
+                </p>
+              </div>
+            </div>
+            <h1 className="font-serif max-w-[22ch] text-[clamp(2.125rem,3.5vw+1rem,3.125rem)] font-medium leading-[1.14] tracking-[-0.02em] text-navy">
               Take control of your money with calm clarity
             </h1>
             <p className="mt-6 max-w-lg text-[15px] leading-[1.7] text-muted-foreground md:text-[17px]">
@@ -48,28 +65,23 @@ export function HeroSection() {
           </div>
 
           <div className="flex justify-center lg:justify-end">
-            <div className="flex max-w-[300px] flex-col items-center gap-5">
-              <div className="flex items-center gap-3 self-start lg:self-center">
-                <Image
-                  src="/icon.png"
-                  alt="MTU NA PESA"
-                  width={48}
-                  height={48}
-                  className="h-12 w-12 rounded-xl border border-navy/[0.08] bg-white object-cover shadow-sm"
-                  priority
-                />
-                <div className="text-left">
-                  <p className="text-sm font-semibold text-navy">MTU NA PESA</p>
-                  <p className="text-xs text-muted-foreground">Overview</p>
-                </div>
-              </div>
-              <div className="shadow-[0_20px_50px_rgba(15,23,41,0.08)]">
-                <PhoneHeroMockup />
-              </div>
+            <div className="w-full max-w-[252px] shadow-[0_20px_50px_rgba(15,23,41,0.08)] sm:max-w-[280px] lg:max-w-[300px]">
+              <PhoneHeroMockup />
             </div>
           </div>
         </div>
       </div>
+
+      <a
+        href="#problem-heading"
+        className="absolute bottom-5 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-0.5 rounded-full px-3 py-2 text-muted-foreground transition hover:text-navy motion-reduce:animate-none motion-safe:animate-bounce"
+        aria-label="Scroll to the next section"
+      >
+        <span className="text-[10px] font-medium uppercase tracking-[0.2em]">Scroll</span>
+        <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </a>
     </section>
   );
 }
