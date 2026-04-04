@@ -1,5 +1,6 @@
 import { FadeIn } from "@/components/FadeIn";
 import { SectionHeading } from "@/components/SectionHeading";
+import { HOME_SECTION_BG } from "@/lib/home-section-bg";
 import { cardPremium, sectionInset, sectionY } from "@/lib/layout";
 
 const flow = [
@@ -12,7 +13,7 @@ const flow = [
 export function SolutionSection() {
   return (
     <section
-      className={`border-y border-navy/[0.06] bg-surface/80 ${sectionY} backdrop-blur-[2px]`}
+      className={`border-y border-navy/[0.06] ${HOME_SECTION_BG.solution} ${sectionY}`}
       aria-labelledby="solution-heading"
     >
       <div className={sectionInset}>

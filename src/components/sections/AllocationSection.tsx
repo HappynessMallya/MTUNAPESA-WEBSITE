@@ -1,5 +1,6 @@
 import { FadeIn } from "@/components/FadeIn";
 import { SectionHeading } from "@/components/SectionHeading";
+import { HOME_SECTION_BG } from "@/lib/home-section-bg";
 import { cardPremium, sectionInset, sectionY } from "@/lib/layout";
 
 const slices = [
@@ -40,7 +41,7 @@ function AllocationPie() {
 
 export function AllocationSection() {
   return (
-    <section className={`bg-background ${sectionY}`} aria-labelledby="allocation-heading">
+    <section className={`${HOME_SECTION_BG.allocation} ${sectionY}`} aria-labelledby="allocation-heading">
       <div className={sectionInset}>
         <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
           <FadeIn>

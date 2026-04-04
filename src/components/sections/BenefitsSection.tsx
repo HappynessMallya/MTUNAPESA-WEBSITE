@@ -1,5 +1,6 @@
 import { FadeIn } from "@/components/FadeIn";
 import { SectionHeading } from "@/components/SectionHeading";
+import { HOME_SECTION_BG } from "@/lib/home-section-bg";
 import { cardPremium, sectionInset, sectionY } from "@/lib/layout";
 
 const points = [
@@ -13,7 +14,7 @@ const points = [
 export function BenefitsSection() {
   return (
     <section
-      className={`border-y border-navy/[0.06] bg-background ${sectionY}`}
+      className={`border-y border-navy/[0.06] ${HOME_SECTION_BG.benefits} ${sectionY}`}
       aria-labelledby="benefits-heading"
     >
       <div className={sectionInset}>

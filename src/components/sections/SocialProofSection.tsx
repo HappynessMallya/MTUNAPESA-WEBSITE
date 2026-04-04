@@ -1,11 +1,12 @@
 import { FadeIn } from "@/components/FadeIn";
+import { HOME_SECTION_BG } from "@/lib/home-section-bg";
 import { sectionInset, sectionY } from "@/lib/layout";
 
 /** Placeholder for future testimonials, beta quotes, and transformation stories. */
 export function SocialProofSection() {
   return (
     <section
-      className={`${sectionY} border-y border-navy/[0.05] bg-gradient-to-b from-surface/50 to-background`}
+      className={`${HOME_SECTION_BG.socialProof} ${sectionY} border-y border-navy/[0.06]`}
       aria-labelledby="social-proof-heading"
     >
       <div className={`${sectionInset} text-center`}>

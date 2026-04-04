@@ -79,8 +79,8 @@ export function Footer() {
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">Support</p>
             <ul className="mt-4 space-y-2.5 text-sm text-muted-foreground">
               <li>
-                <a href="mailto:support@mtunapesa.com" className="transition hover:text-navy">
-                  support@mtunapesa.com
+                <a href="mailto:info@sabyinfotech.com" className="transition hover:text-navy">
+                  info@sabyinfotech.com
                 </a>
               </li>
             </ul>

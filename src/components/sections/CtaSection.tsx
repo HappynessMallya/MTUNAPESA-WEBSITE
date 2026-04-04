@@ -1,11 +1,12 @@
 import { FadeIn } from "@/components/FadeIn";
+import { HOME_SECTION_BG } from "@/lib/home-section-bg";
 import { sectionInset, sectionY } from "@/lib/layout";
 
 export function CtaSection() {
   return (
     <section
       id="cta"
-      className={`${sectionY} border-t border-white/5 bg-navy text-white`}
+      className={`${HOME_SECTION_BG.cta} ${sectionY} border-t border-white/10 text-white`}
       aria-labelledby="cta-heading"
     >
       <div className={`${sectionInset} text-center`}>

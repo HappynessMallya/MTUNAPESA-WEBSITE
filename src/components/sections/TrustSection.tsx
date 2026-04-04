@@ -1,6 +1,7 @@
 import { FadeIn } from "@/components/FadeIn";
 import { IconShield } from "@/components/icons";
 import { SectionHeading } from "@/components/SectionHeading";
+import { HOME_SECTION_BG } from "@/lib/home-section-bg";
 import { cardPremium, sectionInset, sectionY } from "@/lib/layout";
 
 const points = [
@@ -12,7 +13,7 @@ const points = [
 
 export function TrustSection() {
   return (
-    <section className={sectionY} aria-labelledby="trust-heading">
+    <section className={`${HOME_SECTION_BG.trust} ${sectionY}`} aria-labelledby="trust-heading">
       <div className={sectionInset}>
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
           <FadeIn>

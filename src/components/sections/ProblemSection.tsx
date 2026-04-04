@@ -1,5 +1,6 @@
 import { FadeIn } from "@/components/FadeIn";
 import { SectionHeading } from "@/components/SectionHeading";
+import { HOME_SECTION_BG } from "@/lib/home-section-bg";
 import { cardPremium, sectionInset, sectionY } from "@/lib/layout";
 
 const pains = [
@@ -13,7 +14,7 @@ const rotations = ["-rotate-1", "rotate-1", "-rotate-[0.5deg]", "rotate-[0.5deg]
 
 export function ProblemSection() {
   return (
-    <section className={sectionY} aria-labelledby="problem-heading">
+    <section className={`${HOME_SECTION_BG.problem} ${sectionY}`} aria-labelledby="problem-heading">
       <div className={sectionInset}>
         <FadeIn>
           <SectionHeading

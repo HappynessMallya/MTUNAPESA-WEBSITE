@@ -12,6 +12,7 @@ import {
 } from "@/components/icons";
 import { SectionHeading } from "@/components/SectionHeading";
 import { featureGroups, featureList, type FeatureId } from "@/data/features";
+import { HOME_SECTION_BG } from "@/lib/home-section-bg";
 import { cardPremium, sectionInset, sectionY } from "@/lib/layout";
 
 const featureIcons: Record<FeatureId, typeof IconIncome> = {
@@ -33,7 +34,7 @@ export function FeaturesSection() {
 
   return (
     <section
-      className={`border-t border-navy/[0.06] bg-background ${sectionY}`}
+      className={`border-t border-navy/[0.06] ${HOME_SECTION_BG.features} ${sectionY}`}
       aria-labelledby="features-heading"
     >
       <div className={sectionInset}>

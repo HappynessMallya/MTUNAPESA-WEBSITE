@@ -1,6 +1,7 @@
 "use client";
 
 import { faqItems } from "@/data/faq";
+import { HOME_SECTION_BG } from "@/lib/home-section-bg";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useId, useState } from "react";
 
@@ -11,7 +12,7 @@ export function Faq() {
 
   return (
     <section
-      className="border-t border-navy/[0.06] bg-surface/80 py-14 backdrop-blur-sm md:py-20 lg:py-[7.5rem]"
+      className={`border-t border-navy/[0.06] ${HOME_SECTION_BG.faq} py-14 md:py-20 lg:py-[7.5rem]`}
       aria-labelledby="faq-heading"
     >
       <div className="mx-auto max-w-content px-6 lg:px-8">

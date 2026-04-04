@@ -6,12 +6,18 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { graphRoot, organizationSchema, websiteSchema } from "@/lib/schema";
 import { primaryKeywords, siteConfig } from "@/lib/site";
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Lora } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap",
+});
+
+const lora = Lora({
+  subsets: ["latin"],
+  variable: "--font-lora",
   display: "swap",
 });
 
@@ -67,7 +73,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable} suppressHydrationWarning>
+    <html lang="en" className={`${inter.variable} ${lora.variable}`} suppressHydrationWarning>
       <body className="min-h-screen font-sans" suppressHydrationWarning>
         <JsonLd data={graphRoot([organizationSchema(), websiteSchema()])} />
         <Navbar />

@@ -6,6 +6,7 @@ import {
   PhoneReports,
 } from "@/components/PhoneMockup";
 import { SectionHeading } from "@/components/SectionHeading";
+import { HOME_SECTION_BG } from "@/lib/home-section-bg";
 import { sectionInset, sectionY } from "@/lib/layout";
 
 const panels = [
@@ -17,7 +18,7 @@ const panels = [
 
 export function VisualAppSection() {
   return (
-    <section className={`${sectionY} bg-surface/40`} aria-labelledby="visual-heading">
+    <section className={`${HOME_SECTION_BG.visual} ${sectionY}`} aria-labelledby="visual-heading">
       <div className={sectionInset}>
         <FadeIn>
           <SectionHeading

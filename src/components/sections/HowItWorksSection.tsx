@@ -1,6 +1,7 @@
 import { FadeIn } from "@/components/FadeIn";
 import { IconChart, IconExpense, IconIncome, IconSliders } from "@/components/icons";
 import { SectionHeading } from "@/components/SectionHeading";
+import { HOME_SECTION_BG } from "@/lib/home-section-bg";
 import { cardPremium, sectionInset, sectionY } from "@/lib/layout";
 
 const steps = [
@@ -28,7 +29,11 @@ const steps = [
 
 export function HowItWorksSection() {
   return (
-    <section id="how-it-works" className={`${sectionY} bg-surface/60`} aria-labelledby="how-heading">
+    <section
+      id="how-it-works"
+      className={`${HOME_SECTION_BG.howItWorks} ${sectionY}`}
+      aria-labelledby="how-heading"
+    >
       <div className={sectionInset}>
         <FadeIn>
           <SectionHeading
