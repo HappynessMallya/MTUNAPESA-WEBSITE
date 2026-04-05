@@ -35,8 +35,8 @@ export function Footer() {
               />
             </Link>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
-              MTU NA PESA helps individuals build financial discipline through structured money
-              tracking—calm, private, and built for the long term.
+              Mtu na Pesa—your personal financial operating system for Tanzania and beyond: allocation,
+              goals, loans, AI insights, and exports on iOS and Android.
             </p>
           </div>
           <div className="lg:col-span-2">

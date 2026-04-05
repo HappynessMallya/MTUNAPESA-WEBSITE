@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 
-export const alt = "MTU NA PESA — Personal finance and expense tracker app";
+export const alt = "MTU NA PESA — Personal financial operating system";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -52,7 +52,7 @@ export default function OpenGraphImage() {
             letterSpacing: -0.5,
           }}
         >
-          Personal finance app · Expense tracker · Budget allocation
+          Personal financial OS · TZS, USD, KES, UGX · iOS & Android
         </p>
         <p
           style={{
@@ -64,7 +64,7 @@ export default function OpenGraphImage() {
             marginBottom: 0,
           }}
         >
-          Track spending, manage money, and build saving discipline with clarity.
+          Allocation, goals, loans, AI insights, and exports—built for Tanzania and beyond.
         </p>
       </div>
     ),

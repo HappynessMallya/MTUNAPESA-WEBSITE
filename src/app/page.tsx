@@ -6,6 +6,7 @@ import { CtaSection } from "@/components/sections/CtaSection";
 import { FeaturesSection } from "@/components/sections/FeaturesSection";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { HowItWorksSection } from "@/components/sections/HowItWorksSection";
+import { PricingSection } from "@/components/sections/PricingSection";
 import { ProblemSection } from "@/components/sections/ProblemSection";
 import { SocialProofSection } from "@/components/sections/SocialProofSection";
 import { SolutionSection } from "@/components/sections/SolutionSection";
@@ -15,7 +16,7 @@ import { graphRoot, mobileApplicationSchema, softwareApplicationSchema } from "@
 import { primaryKeywords, siteConfig } from "@/lib/site";
 import type { Metadata } from "next";
 
-const homeTitle = "Personal finance app & expense tracker";
+const homeTitle = "Personal financial operating system — Mtu na Pesa";
 const homeDescription = siteConfig.defaultDescription;
 
 export const metadata: Metadata = {
@@ -57,6 +58,7 @@ export default function HomePage() {
       <VisualAppSection />
       <BenefitsSection />
       <TrustSection />
+      <PricingSection />
       <SocialProofSection />
       <CtaSection />
       <Faq />

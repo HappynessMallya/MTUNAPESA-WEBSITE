@@ -88,7 +88,7 @@ export function PhoneAllocation() {
         <p className="text-sm font-semibold text-navy">Your split</p>
         <div className="mx-auto mt-4 h-24 w-24 rounded-full border-4 border-border bg-[conic-gradient(#94a3b8_0deg_36deg,#334155_36deg_198deg,#93c5fd_198deg_288deg,#6ee7b7_288deg_360deg)]" />
         <ul className="mt-4 space-y-1 text-[10px] text-muted-foreground">
-          <li>Giving · Needs · Wants · Savings</li>
+          <li>Needs · Savings · Investment · Charity · Fun</li>
         </ul>
       </div>
     </Frame>

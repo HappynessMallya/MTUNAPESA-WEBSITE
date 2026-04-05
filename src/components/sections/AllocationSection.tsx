@@ -4,10 +4,11 @@ import { HOME_SECTION_BG } from "@/lib/home-section-bg";
 import { cardPremium, sectionInset, sectionY } from "@/lib/layout";
 
 const slices = [
-  { label: "Giving", pct: "10%", color: "#64748b", deg: [0, 36] as const },
-  { label: "Needs", pct: "45%", color: "#1e3a5f", deg: [36, 198] as const },
-  { label: "Wants", pct: "25%", color: "#7eb0ff", deg: [198, 288] as const },
-  { label: "Saving", pct: "20%", color: "#5cb89a", deg: [288, 360] as const },
+  { label: "Needs", pct: "35%", color: "#1e3a5f", deg: [0, 126] as const },
+  { label: "Savings", pct: "20%", color: "#5cb89a", deg: [126, 198] as const },
+  { label: "Investment", pct: "15%", color: "#3b6cf0", deg: [198, 252] as const },
+  { label: "Charity", pct: "10%", color: "#64748b", deg: [252, 288] as const },
+  { label: "Fun", pct: "20%", color: "#7eb0ff", deg: [288, 360] as const },
 ];
 
 function AllocationPie() {
@@ -19,7 +20,7 @@ function AllocationPie() {
         className="relative h-56 w-56 shrink-0 rounded-full shadow-[0_20px_60px_rgba(15,23,41,0.12)] ring-1 ring-navy/[0.06]"
         style={{ background: `conic-gradient(${gradient})` }}
         role="img"
-        aria-label="Allocation: giving, needs, wants, saving"
+        aria-label="Allocation: needs, savings, investment, charity, fun"
       />
       <ul className="w-full max-w-sm space-y-4">
         {slices.map((s) => (
@@ -48,8 +49,8 @@ export function AllocationSection() {
             <SectionHeading
               id="allocation-heading"
               label="Allocation"
-              title="A Proven Allocation Method That Keeps Spending Balanced"
-              description="Needs, wants, saving, and giving each have a place. The structure creates calm: you decide the percentages once, then refine as life changes."
+              title="Smart Money Allocation In Minutes"
+              description="Tell every shilling where to go—Needs, Savings, Investment, Charity, Fun. Set your plan once; when income is recorded, the app shows how to split it."
             />
             <ul className="mt-8 space-y-3 text-sm leading-relaxed text-muted-foreground">
               <li className="flex gap-2">

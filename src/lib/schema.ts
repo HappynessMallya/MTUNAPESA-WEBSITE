@@ -39,7 +39,8 @@ export function softwareApplicationSchema() {
       "@type": "Offer",
       price: "0",
       priceCurrency: "USD",
-      description: "Free tier with core tracking and allocation; optional premium may apply.",
+      description:
+        "Free tier: income & expense tracking, 3 savings goals, basic analytics, 1 account. Premium: unlimited goals and accounts, category budgets, AI assistant, CSV/Excel/PDF export, priority support.",
     },
     description: siteConfig.defaultDescription,
     url: siteConfig.url,

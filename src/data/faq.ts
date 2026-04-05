@@ -1,84 +1,114 @@
-export type FaqGroup = "security" | "privacy" | "product" | "allocation" | "habits" | "audience";
+export type FaqGroup =
+  | "security"
+  | "privacy"
+  | "product"
+  | "allocation"
+  | "habits"
+  | "audience"
+  | "pricing";
 
 export type FaqItem = { question: string; answer: string; group: FaqGroup };
 
-/** Shared FAQ copy for the home accordion and /faq (SEO + FAQPage schema on /faq only). */
+/** Home accordion (first 8) + full /faq page + FAQPage schema. */
 export const faqItems: FaqItem[] = [
   {
-    group: "security",
-    question: "Is my data secure?",
+    group: "pricing",
+    question: "Is Mtu na Pesa free?",
     answer:
-      "Yes. We use encryption in transit and at rest, secure authentication, and infrastructure designed for sensitive financial data. Your records stay private to you.",
+      "Yes. Core features are free. Premium adds the AI assistant, data export (CSV, Excel, PDF), unlimited savings goals and accounts, category budgets, and priority support—via subscription in the app.",
+  },
+  {
+    group: "security",
+    question: "Is my financial data safe?",
+    answer:
+      "Yes. We use bank-grade encryption, secure token storage on device (Keychain / Keystore), and industry-standard password hashing—never stored in plain text. Your data is private and only accessible by you. Biometric sign-in (Face ID / Touch ID) is supported where available.",
+  },
+  {
+    group: "product",
+    question: "Can I use it for my business?",
+    answer:
+      "Yes. You can manage personal and business money in one app. Create separate accounts for each so reporting stays clear.",
+  },
+  {
+    group: "product",
+    question: "What currencies are supported?",
+    answer:
+      "Tanzanian Shilling (TZS), US Dollar (USD), Kenyan Shilling (KES), and Ugandan Shilling (UGX). The app is built for Tanzania’s landscape—including Mobile Money (e.g. M-Pesa), banks, and cash.",
+  },
+  {
+    group: "product",
+    question: "Can I export my data?",
+    answer:
+      "Yes—on Premium. Export as CSV, Excel, or PDF anytime, with filters for date range and transaction type.",
+  },
+  {
+    group: "product",
+    question: "How does the AI assistant work?",
+    answer:
+      "Ask questions in plain language—for example, “How much did I spend on food this month?”—and get answers from your actual records, plus weekly summaries and habit suggestions.",
+  },
+  {
+    group: "product",
+    question: "Can I track loans?",
+    answer:
+      "Yes. Track money you have borrowed or lent, log repayments, see balances update, and get reminders when payments are due.",
   },
   {
     group: "privacy",
     question: "Do you sell my financial data or show ads?",
     answer:
-      "No. MTU NA PESA does not sell your financial records for marketing, and the experience is not ad-supported. Your information is used to power your own insights.",
-  },
-  {
-    group: "product",
-    question: "Is the app free?",
-    answer:
-      "You can start with core tracking and allocation features at no cost. Premium capabilities may be offered as optional upgrades—check the app store listing for current pricing.",
+      "No. Mtu na Pesa does not sell your financial records for marketing, and the experience is not ad-supported.",
   },
   {
     group: "audience",
     question: "Who is MTU NA PESA for?",
     answer:
-      "Anyone who wants calm structure—people who earn steadily but feel unclear on cash flow, savers who need a repeatable plan, and anyone rebuilding discipline without shame or hype.",
-  },
-  {
-    group: "audience",
-    question: "Do I need accounting knowledge?",
-    answer:
-      "No. MTU NA PESA is built for everyday money management: record income, log spending, and follow your allocation. No jargon required.",
+      "Tanzanian youth, SMEs, freelancers, and anyone who wants disciplined, clear money management—without spreadsheet chaos.",
   },
   {
     group: "product",
     question: "Can I customize categories?",
     answer:
-      "Yes. You can tailor categories to match how you actually spend, while keeping the overall allocation framework simple.",
+      "Yes. Add your own income sources and expense categories while keeping allocation and budgets structured.",
   },
   {
     group: "allocation",
     question: "Can I change allocation later?",
     answer:
-      "Yes. Percentages can be adjusted when your situation changes. The app recalculates guidance so your plan stays realistic.",
+      "Yes. Adjust your split anytime; the app updates guidance when income is recorded so the plan stays realistic.",
   },
   {
     group: "allocation",
     question: "How can I track personal expenses without spreadsheets?",
     answer:
-      "Use an expense tracking mobile app to log purchases and bills as they happen. MTU NA PESA keeps income, expenses, and categories in one place so you always see where your money goes.",
+      "Log purchases and bills as they happen. Mtu na Pesa keeps income, expenses, categories, and accounts in one place so you always see where your money goes.",
   },
   {
     group: "allocation",
     question: "How do I manage salary money more effectively?",
     answer:
-      "Start by splitting your income into clear buckets—needs, wants, savings, and giving—using a simple allocation plan. The app helps you stick to those percentages and adjust when life changes.",
+      "Use smart allocation: assign Needs, Savings, Investment, Charity, and Fun before you spend. The app applies your percentages when income arrives so you see what is safe to spend and what is protected.",
   },
   {
     group: "allocation",
     question: "What is percentage-based budget allocation?",
     answer:
-      "It means assigning a set share of your income to each purpose—such as essentials, discretionary spending, and savings—before you spend. MTU NA PESA uses this approach so your plan stays clear and repeatable.",
-  },
-  {
-    group: "allocation",
-    question: "Can I use a percentage split like 10 / 45 / 25 / 20 for budgeting?",
-    answer:
-      "Yes. MTU NA PESA is built around customizable allocation: you set the percentages that match your life (for example portions for giving, essentials, discretionary spending, and savings). Change them anytime as your income or goals shift.",
+      "You assign a share of income to each purpose before spending. Mtu na Pesa uses your plan so every shilling has a job and you can refine it as life changes.",
   },
   {
     group: "habits",
     question: "How can I build saving discipline?",
     answer:
-      "Consistency matters more than perfection. Record spending regularly, review your allocation, and let savings be a fixed line in your plan—not whatever is left at month end.",
+      "Use savings goals with visible progress, category budgets, and reminders. Consistency matters more than perfection—small deposits add up.",
   },
 ];
 
 export const faqSectionMeta: { group: FaqGroup; title: string; intro: string }[] = [
+  {
+    group: "pricing",
+    title: "Pricing & plans",
+    intro: "Free vs Premium at a glance.",
+  },
   {
     group: "security",
     title: "Security",
@@ -92,7 +122,7 @@ export const faqSectionMeta: { group: FaqGroup; title: string; intro: string }[]
   {
     group: "product",
     title: "Using the app",
-    intro: "Pricing, categories, and everyday mechanics.",
+    intro: "Currencies, export, AI, loans, and business use.",
   },
   {
     group: "allocation",
@@ -107,6 +137,6 @@ export const faqSectionMeta: { group: FaqGroup; title: string; intro: string }[]
   {
     group: "audience",
     title: "Who it is for",
-    intro: "Fit and expectations—no hype.",
+    intro: "Built for real lives in Tanzania and beyond.",
   },
 ];

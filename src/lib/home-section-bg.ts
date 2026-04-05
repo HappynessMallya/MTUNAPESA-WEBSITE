@@ -14,6 +14,7 @@ export const HOME_SECTION_BG = {
   visual: "bg-[#e2e7f2]",
   benefits: "bg-gradient-to-br from-white from-40% via-accent-soft/25 to-[#e8edf6]",
   trust: "bg-[#ebeff5]",
+  pricing: "bg-[#f0f4fa]",
   socialProof: "bg-navy/[0.04]",
   cta: "bg-navy",
   faq: "bg-[#dde4f0]",

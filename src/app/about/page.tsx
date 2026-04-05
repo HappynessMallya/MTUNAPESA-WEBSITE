@@ -78,6 +78,33 @@ export default function AboutPage() {
       </div>
 
       <FadeIn>
+        <div className={`${cardPremium} mt-16 p-8 lg:mt-20 lg:p-10`}>
+          <h2 className="text-section font-semibold text-navy">Technical highlights</h2>
+          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+            Built for real devices and real money in East Africa.
+          </p>
+          <ul className="mt-8 grid gap-3 text-sm leading-relaxed text-navy sm:grid-cols-2">
+            {[
+              "Available on iOS and Android",
+              "Real-time sync across devices",
+              "Currencies: TZS, USD, KES, UGX",
+              "Dark mode for comfortable use",
+              "Mobile Money (e.g. M-Pesa), bank, and cash",
+              "Custom income and expense categories",
+              "Offline-friendly—records sync when you are back online",
+            ].map((line) => (
+              <li key={line} className="flex gap-2">
+                <span className="text-accent" aria-hidden>
+                  ·
+                </span>
+                {line}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </FadeIn>
+
+      <FadeIn>
         <div className={`${cardPremium} mt-16 p-8 text-center lg:mt-20 lg:p-10`}>
           <p className="text-sm font-medium text-navy">When you are ready, the system is waiting.</p>
           <div className="mt-6 flex justify-center">

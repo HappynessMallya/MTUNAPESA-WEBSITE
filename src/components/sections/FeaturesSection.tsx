@@ -1,29 +1,34 @@
 import { FadeIn } from "@/components/FadeIn";
 import Link from "next/link";
 import {
+  IconBell,
   IconChart,
-  IconDiscipline,
+  IconDownload,
   IconExpense,
-  IconIncome,
   IconLayers,
+  IconLoan,
   IconPie,
   IconReport,
-  IconShield,
+  IconSliders,
+  IconSpark,
+  IconTarget,
 } from "@/components/icons";
 import { SectionHeading } from "@/components/SectionHeading";
 import { featureGroups, featureList, type FeatureId } from "@/data/features";
 import { HOME_SECTION_BG } from "@/lib/home-section-bg";
 import { cardPremium, sectionInset, sectionY } from "@/lib/layout";
 
-const featureIcons: Record<FeatureId, typeof IconIncome> = {
-  income: IconIncome,
-  expense: IconExpense,
+const featureIcons: Record<FeatureId, typeof IconPie> = {
   allocation: IconPie,
-  savings: IconChart,
-  discipline: IconDiscipline,
+  tracking: IconExpense,
+  savings: IconTarget,
+  loan: IconLoan,
   reports: IconReport,
-  privacy: IconShield,
+  categoryBudgets: IconSliders,
+  ai: IconSpark,
+  notifications: IconBell,
   multi: IconLayers,
+  export: IconDownload,
 };
 
 export function FeaturesSection() {
@@ -41,9 +46,9 @@ export function FeaturesSection() {
         <FadeIn>
           <SectionHeading
             id="features-heading"
-            label="Capability"
-            title="Everything You Need To Build Financial Discipline"
-            description="Tracking clarity, allocation, habits, insight, privacy, and structure—grouped the way your brain already thinks about money."
+            label="Core features"
+            title="Everything Your Financial Operating System Needs"
+            description="Allocation, tracking, goals, loans, analytics, budgets, AI, notifications, multi-account, and export—aligned with how the app actually works."
           />
         </FadeIn>
 

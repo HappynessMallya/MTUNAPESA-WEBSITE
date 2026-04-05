@@ -1,28 +1,38 @@
 import { FadeIn } from "@/components/FadeIn";
-import { IconChart, IconExpense, IconIncome, IconSliders } from "@/components/icons";
+import { IconChart, IconIncome, IconLayers, IconPie, IconSliders, IconSpark, IconTarget } from "@/components/icons";
 import { SectionHeading } from "@/components/SectionHeading";
 import { HOME_SECTION_BG } from "@/lib/home-section-bg";
 import { cardPremium, sectionInset, sectionY } from "@/lib/layout";
 
 const steps = [
   {
-    title: "Add your income sources",
-    body: "Capture what comes in—salary, business, transfers—so every plan starts from the real number.",
+    title: "We ask how much you earn",
+    body: "Start from the real number—no guesswork before the plan begins.",
     Icon: IconIncome,
   },
   {
-    title: "Track daily spending",
-    body: "Lightweight logging keeps the picture honest. Patterns show up without judgment.",
-    Icon: IconExpense,
+    title: "How your income arrives",
+    body: "Salary, freelance, or mixed—so suggestions match how money actually hits your accounts.",
+    Icon: IconLayers,
   },
   {
-    title: "Follow allocation guidance",
-    body: "Your split across needs, wants, saving, and giving keeps spending and priorities aligned.",
+    title: "A smart budget split",
+    body: "We suggest an allocation based on your situation. You stay in control of every percentage.",
     Icon: IconSliders,
   },
   {
-    title: "Build long-term habits",
-    body: "Review calmly, adjust deliberately, repeat. Discipline becomes a rhythm—not a crash diet.",
+    title: "Pick your first savings goal",
+    body: "Emergency fund, travel, a new phone—choose what matters first and see progress from day one.",
+    Icon: IconTarget,
+  },
+  {
+    title: "You are ready to go",
+    body: "The shell is set; logging income and expenses stays as simple as three taps.",
+    Icon: IconPie,
+  },
+  {
+    title: "Under two minutes",
+    body: "The full onboarding flow is designed to respect your time—clarity without a tutorial marathon.",
     Icon: IconChart,
   },
 ];
@@ -38,14 +48,14 @@ export function HowItWorksSection() {
         <FadeIn>
           <SectionHeading
             id="how-heading"
-            label="How it works"
-            title="Four Calm Steps Toward Financial Clarity"
-            description="Progressive simplicity: each step prepares the next. No jargon, no overwhelm—just a sequence you can sustain."
+            label="Onboarding"
+            title="Onboarding That Actually Helps"
+            description="No confusing setup—six simple steps. We learn how you earn, suggest a split, and get your first goal in place so you can start immediately."
           />
         </FadeIn>
-        <ol className="mt-4 grid list-none gap-5 p-0 sm:grid-cols-2 lg:mt-8 lg:grid-cols-4 lg:gap-5">
+        <ol className="mt-4 grid list-none gap-5 p-0 sm:grid-cols-2 lg:mt-8 lg:grid-cols-3 lg:gap-5">
           {steps.map((s, i) => (
-            <li key={s.title} className={i % 2 === 1 ? "lg:mt-12" : ""}>
+            <li key={s.title} className={i % 3 === 1 ? "lg:mt-10" : i % 3 === 2 ? "lg:mt-5" : ""}>
               <FadeIn>
                 <div
                   className={`${cardPremium} flex h-full flex-col p-6 transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_48px_rgba(15,23,41,0.1)]`}
@@ -61,6 +71,12 @@ export function HowItWorksSection() {
             </li>
           ))}
         </ol>
+        <FadeIn>
+          <p className="mt-10 text-center text-sm font-medium text-navy lg:mt-14">
+            <IconSpark className="mr-2 inline-block h-4 w-4 align-text-bottom text-accent" aria-hidden />
+            Takes less than 2 minutes—then you are tracking for real.
+          </p>
+        </FadeIn>
       </div>
     </section>
   );

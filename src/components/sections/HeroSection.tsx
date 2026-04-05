@@ -1,7 +1,8 @@
-import { ButtonPrimary, ButtonSecondary } from "@/components/Button";
+import { ButtonSecondary } from "@/components/Button";
 import { PhoneHeroMockup } from "@/components/PhoneMockup";
 import { HOME_SECTION_BG } from "@/lib/home-section-bg";
 import { sectionInset } from "@/lib/layout";
+import { siteConfig } from "@/lib/site";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -35,12 +36,12 @@ export function HeroSection() {
                 </p>
               </div>
             </div>
-            <h1 className="font-serif max-w-[22ch] text-[clamp(2.125rem,3.5vw+1rem,3.125rem)] font-medium leading-[1.14] tracking-[-0.02em] text-navy">
-              Take control of your money with calm clarity
+            <h1 className="font-serif max-w-[20ch] text-[clamp(2.125rem,3.5vw+1rem,3.125rem)] font-medium leading-[1.14] tracking-[-0.02em] text-navy">
+              Take control of every shilling
             </h1>
-            <p className="mt-6 max-w-lg text-[15px] leading-[1.7] text-muted-foreground md:text-[17px]">
-              MTU NA PESA helps you track spending, organize income, and build money habits with a
-              simple, structured system.
+            <p className="mt-6 max-w-xl text-[15px] leading-[1.7] text-muted-foreground md:text-[17px]">
+              Mtu na Pesa is your personal financial operating system. Track income, manage expenses, set
+              savings goals, and build financial discipline—all in one app.
             </p>
             <p className="mt-5 max-w-lg text-sm leading-relaxed text-muted-foreground">
               <Link
@@ -58,7 +59,24 @@ export function HeroSection() {
               </Link>
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
-              <ButtonPrimary href="/#cta">Start building financial discipline</ButtonPrimary>
+              <a
+                href={siteConfig.appStoreUrl}
+                className="inline-flex min-h-12 items-center justify-center rounded-xl bg-navy px-6 text-sm font-semibold text-white shadow-md transition hover:bg-navy-muted hover:shadow-lg"
+                rel="noopener noreferrer"
+                target="_blank"
+                data-analytics="download-app-store-hero"
+              >
+                Download — App Store
+              </a>
+              <a
+                href={siteConfig.playStoreUrl}
+                className="inline-flex min-h-12 items-center justify-center rounded-xl border border-border/90 bg-surface/95 px-6 text-sm font-semibold text-navy shadow-sm backdrop-blur-sm transition hover:border-navy/12 hover:bg-surface"
+                rel="noopener noreferrer"
+                target="_blank"
+                data-analytics="download-play-store-hero"
+              >
+                Download — Google Play
+              </a>
               <ButtonSecondary href="/#how-it-works">See how it works</ButtonSecondary>
             </div>
             <p className="mt-10 text-[11px] tracking-wide text-muted-foreground">{trust.join(" · ")}</p>
